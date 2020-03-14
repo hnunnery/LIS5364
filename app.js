@@ -1,3 +1,4 @@
+// creating variables
 const showList = document.querySelector("#show-list");
 const form = document.querySelector("#add-show-form");
 

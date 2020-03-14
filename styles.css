@@ -4,7 +4,7 @@ body {
 }
 
 h1 {
-  color: #fff;
+  color: #fafafa;
   font-size: 64px;
   letter-spacing: 2px;
   margin-top: 80px;
@@ -12,11 +12,11 @@ h1 {
 }
 
 .content {
-  background: #fff;
+  background: #fafafa;
   max-width: 960px;
   margin: 30px auto;
   padding: 20px 30px;
-  border-radius: 10px 120px 10px 10px;
+  border-radius: 10px;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -27,27 +27,20 @@ ul {
 
 li {
   padding: 20px;
-  background: #f6f6f6;
-  font-size: 20px;
+  background: #fafafa;
+  font-size: 1.2em;
   color: #555;
   position: relative;
   border-bottom: 1px solid #e6e6e6;
   height: 46px;
 }
 
-li:nth-child(even) {
-  padding: 20px;
-  background: #f2f2f2;
-}
-
 li span {
   display: block;
+  padding-bottom: 10px;
 }
-
 li span:nth-child(2) {
-  font-size: 16px;
-  margin-top: 6px;
-  color: #999;
+  font-weight: 600;
 }
 
 li div {
@@ -62,14 +55,14 @@ li div {
   cursor: pointer;
 }
 
-/* form {
+form {
   display: grid;
-  grid-template-columns: minmax(50px, auto);
-} */
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+}
 
 form input {
   float: left;
-  width: 38%;
   margin: 0;
   border: 0;
   border-bottom: 1px solid #eee;
@@ -82,7 +75,7 @@ form input {
 
 form input:focus {
   outline: none;
-  border-bottom: 3px solid #3b393b;
+  border-bottom: 3px solid #2e2e30e1;
   padding-bottom: 8px;
   transition: all ease 0.2s;
 }
@@ -94,13 +87,13 @@ form:after {
 }
 
 button {
-  border: 0;
-  background: #2e2e30;
+  background: #2e2e30e1;
   border-radius: 10px;
-  padding: 13px 25px;
-  width: 14%;
+  padding: 10px;
   box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.1);
   color: #fafafa;
+  font-family: ubuntu;
+  font-size: 1.1em;
   cursor: pointer;
 }
 
@@ -109,8 +102,5 @@ button {
   /* For mobile phones: */
   h1 {
     display: none;
-  }
-  .content {
-    border-radius: 10px 10px 10px 10px;
   }
 }

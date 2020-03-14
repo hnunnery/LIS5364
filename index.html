@@ -3,27 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LIS5364</title>
+    <title>LIS5364 - Binge Watch Ratings</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>COVID 19 Binge Watch Ratings</h1>
-
+    <h1>COVID19 Binge Watch Ratings</h1>
     <div class="content">
       <form id="add-show-form">
-        <input type="text" name="name" placeholder="Name" />
-        <input type="text" name="rating" placeholder="Rating" />
-        <button>Add</button>
+        <input type="text" name="name" placeholder="Name of Show" />
+        <input type="text" name="rating" placeholder="Rating (0-10)" />
+        <button>Add to List</button>
       </form>
-
       <ul id="show-list"></ul>
     </div>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
     <script>
-      // Your web app's Firebase configuration
+      // Firebase configuration
       var firebaseConfig = {
         apiKey: "AIzaSyDR9dJ9BYDqp6wq2JM1WROnnntQZjAuvCk",
         authDomain: "lis5364.firebaseapp.com",
@@ -36,7 +32,6 @@
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
       var firestore = firebase.firestore();
     </script>
     <script src="app.js"></script>
