@@ -64,6 +64,7 @@ form {
   grid-gap: 10px;
   grid-template-columns: 4fr 1fr 1fr 4fr 2fr;
   justify-content: center;
+  align-items: center;
 }
 
 form input {
