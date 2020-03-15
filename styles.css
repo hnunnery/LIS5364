@@ -1,19 +1,28 @@
 body {
-  background: #2e2e30;
+  background: #2a2a2e;
   font-family: ubuntu;
 }
 
 h1 {
-  color: #fafafa;
+  color: #ceb888;
   font-size: 64px;
   letter-spacing: 2px;
   margin-top: 80px;
   text-align: center;
 }
 
+h2 {
+  color: #ceb888;
+  font-size: 32px;
+  letter-spacing: 1.5px;
+  margin-top: 30px;
+  text-align: center;
+  display: none;
+}
+
 .content {
   background: #fafafa;
-  max-width: 960px;
+  max-width: 1200px;
   margin: 30px auto;
   padding: 20px 30px;
   border-radius: 10px;
@@ -23,42 +32,38 @@ h1 {
 ul {
   list-style-type: none;
   padding: 0;
+  position: relative;
 }
 
 li {
   padding: 20px;
-  background: #fafafa;
   font-size: 1.2em;
   color: #555;
-  position: relative;
-  border-bottom: 1px solid #e6e6e6;
-  height: 46px;
+  border-bottom: 1px solid #782f40;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 3fr 3fr 2fr 3fr;
 }
 
-li span {
-  display: block;
-  padding-bottom: 10px;
-}
-li span:nth-child(2) {
+li span:nth-child(3) {
   font-weight: 600;
 }
 
 li div {
   position: absolute;
-  top: 0;
-  right: 0px;
-  background: rgba(255, 255, 255, 0.6);
+  top: 2;
+  right: 0;
   width: 40px;
-  text-align: center;
-  padding: 10px 0;
-  font-weight: bold;
+  font-size: 1.25em;
+  color: #782f40;
   cursor: pointer;
 }
 
 form {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  grid-template-columns: 4fr 1fr 1fr 4fr 2fr;
+  /* justify-content: center; */
 }
 
 form input {
@@ -75,7 +80,7 @@ form input {
 
 form input:focus {
   outline: none;
-  border-bottom: 3px solid #2e2e30e1;
+  border-bottom: 3px solid #782f40;
   padding-bottom: 8px;
   transition: all ease 0.2s;
 }
@@ -87,7 +92,7 @@ form:after {
 }
 
 button {
-  background: #2e2e30e1;
+  background: #782f40;
   border-radius: 10px;
   padding: 10px;
   box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.1);
@@ -98,9 +103,16 @@ button {
 }
 
 /* MEDIA QUERIES */
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
+
+@media only screen and (max-width: 1250px) {
   h1 {
     display: none;
+  }
+  h2 {
+    display: block;
+  }
+  li,
+  form {
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
   }
 }
