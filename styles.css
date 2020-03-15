@@ -62,7 +62,7 @@ li div {
 form {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 400px 200px 100px 300px 200px;
+  grid-template-columns: 350px 200px 180px 300px 180px;
 }
 
 form input {
