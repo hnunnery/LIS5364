@@ -43,7 +43,7 @@ li {
   display: grid;
   grid-gap: 10px;
   /*grid-template-columns: 3fr 3fr 2fr 3fr;*/
-  grid-template-columns: 350px 200px 150px 250px 150px;
+  grid-template-columns: 350px 200px 150px 300px 150px;
 }
 
 li span:nth-child(3) {
@@ -63,7 +63,7 @@ li div {
 form {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 350px 200px 150px 250px 150px;
+  grid-template-columns: 350px 200px 150px 300px 150px;
 }
 
 form input {
