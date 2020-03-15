@@ -60,6 +60,7 @@ li div {
 }
 
 form {
+  max-width: 1200px;
   display: grid;
   grid-gap: 10px;
   /* grid-template-columns: 300px 200px 180px 250px 150px; */
