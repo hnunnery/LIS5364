@@ -34,7 +34,7 @@ function renderShow(doc) {
 // retrieve real-time data from firestore
 firestore
   .collection("show")
-  .orderBy("rating", Query.Direction.DESCENDING)
+  .orderBy("rating", "desc")
   .onSnapshot(querySnapshot => {
     let changes = querySnapshot.docChanges();
     changes.forEach(change => {
