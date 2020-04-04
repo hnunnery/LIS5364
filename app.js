@@ -27,13 +27,14 @@ function renderShow(doc) {
   showList.appendChild(li);
 
   // deleting data from firestore
-  cross.addEventListener("click", e => {
+  cross.addEventListener("click", (e) => {
     e.stopPropagation();
-    let id = e.target.parentElement.getAttribute("data-id");
-    firestore
-      .collection("show")
-      .doc(id)
-      .delete();
+    alert("Deleting is disabled");
+    // let id = e.target.parentElement.getAttribute("data-id");
+    // firestore
+    //   .collection("show")
+    //   .doc(id)
+    //   .delete();
   });
 }
 
@@ -41,9 +42,9 @@ function renderShow(doc) {
 firestore
   .collection("show")
   .orderBy("rating", "desc")
-  .onSnapshot(querySnapshot => {
+  .onSnapshot((querySnapshot) => {
     let changes = querySnapshot.docChanges();
-    changes.forEach(change => {
+    changes.forEach((change) => {
       if (change.type == "added") {
         renderShow(change.doc);
       } else if (change.type == "removed") {
@@ -54,13 +55,13 @@ firestore
   });
 
 // saving data to firestore
-form.addEventListener("submit", e => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   firestore.collection("show").add({
     name: form.name.value,
     platform: form.platform.value,
     rating: form.rating.value,
-    user: form.user.value
+    user: form.user.value,
   });
   form.name.value = "";
   form.platform.value = "";
